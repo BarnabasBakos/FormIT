@@ -1,0 +1,43 @@
+<h2>from validation</h2>
+<form name="myForm">
+
+    <fieldset ng-form="text">
+        <legend ng-model="data.name">Name:</legend>
+        <input type="text"
+               data-ng-model="data.name.name"
+               required
+               />
+
+    </fieldset>
+
+    <div>{{data.name.name}}</div>
+
+    <fieldset ng-form="phone">
+        <legend ng-model="data.phone">Phone:</legend>
+        <input type="text"
+               data-ng-model="data.phone.phone"
+               required
+               />
+
+    </fieldset>
+
+    <fieldset ng-form="radio">
+        <legend ng-model="data.haveCar">have car?</legend>
+        <input type="radio" value="Yes" name="Y/N" data-ng-model="data.haveCar.radio"/>Yes
+        <input type="radio" value="No" name="Y/N" data-ng-model="data.haveCar.radio"/>No
+    </fieldset>
+
+    <fieldset ng-form="check">
+        <legend ng-model="data.carColor">car color</legend>
+        <input type="checkbox"  data-ng-model="data.carColor.Red"/>Red
+        <input type="checkbox"  data-ng-model="data.carColor.Green"/>Green
+        <input type="checkbox"  data-ng-model="data.carColor.Yellow"/>Yellow
+        <input type="checkbox"  data-ng-model="data.carColor.Black"/>Black
+    </fieldset>
+
+    <div>
+        <button data-ng-disabled="myForm.$invalid" data-ng-click="vm.send(data)">Submit</button>
+    </div>
+
+
+</form>

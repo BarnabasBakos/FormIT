@@ -1,0 +1,23 @@
+{
+  "name": "x",
+  "version": "1.0.0",
+  "description": "Form builder",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.5.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tasseri/FormIT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tasseri/FormIT/issues"
+  },
+  "homepage": "https://github.com/Tasseri/FormIT#readme"
+}
