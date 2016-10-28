@@ -1,10 +1,10 @@
 <fieldset>
-    <legend>Add a {{name}}-question: </legend>
+    <legend>Add a {{name}}-question: {{item}}</legend>
     <md-input-container flex-gt-sm>
         <label>Enter your question: </label>
-        <input ng-model="bla">
+        <input ng-model="question">
     </md-input-container>
-    <md-button class="md-raised" ng-click="submit(bla, index)" >
+    <md-button class="md-raised" ng-click="submit(question, index)">
         Create
     </md-button>
 </fieldset>

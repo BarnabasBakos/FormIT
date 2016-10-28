@@ -14,8 +14,6 @@ academy.form.FormController = function(formService) {
     vm.data = {};
 
     function send () {
-        console.log(vm.form);
-        console.log(vm.data);
         for (var i = 0; i < vm.form.questions.length; i++) {
             if (vm.form.questions[i].type === "checkbox") {
                 vm.data.answers[i] = vm.form.questions[i].answer;
@@ -36,13 +34,10 @@ academy.form.FormController = function(formService) {
         formService.getForms()
             .then(function(data){
                 vm.forms=data;
-                console.log(vm.forms);
             });
     }
 
     function viewForm (formData) {
         vm.form=formData.form;
-        console.log(vm.form);
-        console.log(vm.form.formtitle)
     }
 };

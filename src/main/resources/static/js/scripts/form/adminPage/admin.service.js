@@ -26,6 +26,7 @@ academy.admin.AdminService =function($http, $q){
     vm.getForm = getForm;
     vm.getKey = getKey;
     vm.send = send;
+    vm.remove=remove;
 
 
     vm.form = {
@@ -104,6 +105,10 @@ academy.admin.AdminService =function($http, $q){
 
         index = vm.form.questions.indexOf(question);
         vm.form.questions[index].choices.push(option);
+    }
+    function remove(question){
+        index = vm.form.questions.indexOf(question);
+        vm.form.questions.splice(index,1);
     }
 
 };

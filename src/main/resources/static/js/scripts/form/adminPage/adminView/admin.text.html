@@ -1,6 +1,6 @@
 <fieldset ng-form="text">
     <legend>{{question.description}}</legend>
-
+    <md-button class="md-fab md-mini md-warn" ng-click="remove(question, index)" >X</md-button>
     <md-input-container flex-gt-sm>
         <label>{{question.description}}</label>
         <input ng-model="dummy"/>

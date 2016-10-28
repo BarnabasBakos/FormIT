@@ -1,7 +1,7 @@
-if(!academy) {
+if (!academy) {
     var academy = {};
 }
-if(!academy.admin) {
+if (!academy.admin) {
     academy.admin = {};
 }
 academy.admin.formAddQuestionDirective = function () {
@@ -9,12 +9,11 @@ academy.admin.formAddQuestionDirective = function () {
         restrict: 'E',
         templateUrl: 'js/scripts/form/formEditOptions/form.add.question.html',
         scope: {
-            "submit":'=',
-            "index":'=',
-            "name":'='
-
+            "submit": '=',
+            "index": '=',
+            "name": '='
         },
-        replace:true
+        replace: true
 
     }
 };

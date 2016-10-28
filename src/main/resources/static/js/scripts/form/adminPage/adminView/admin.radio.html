@@ -1,6 +1,7 @@
 <fieldset ng-form="radio">
 
     <legend>{{ question.description }}</legend>
+    <md-button class="md-fab md-mini md-warn" ng-click="remove(question, index)" >X</md-button>
     <div ng-repeat="option in question.choices">
         <md-radio-group ng-model="question.answer">
             <md-radio-button ng-value="option" required>

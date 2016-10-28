@@ -1,7 +1,7 @@
-if(!academy) {
+if (!academy) {
     var academy = {};
 }
-if(!academy.admin) {
+if (!academy.admin) {
     academy.admin = {};
 }
 academy.admin.TextareaDirective = function () {
@@ -9,7 +9,9 @@ academy.admin.TextareaDirective = function () {
         restrict: 'E',
         templateUrl: 'js/scripts/form/adminPage/adminView/admin.textarea.html',
         scope: {
-            "question": '='
+            "question": '=',
+            "remove": '=',
+            "index": '='
         },
         replace: true
     }

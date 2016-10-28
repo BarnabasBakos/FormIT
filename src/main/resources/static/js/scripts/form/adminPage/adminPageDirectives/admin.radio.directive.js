@@ -1,7 +1,7 @@
-if(!academy) {
+if (!academy) {
     var academy = {};
 }
-if(!academy.admin) {
+if (!academy.admin) {
     academy.admin = {};
 }
 academy.admin.RadioDirective = function () {
@@ -10,7 +10,9 @@ academy.admin.RadioDirective = function () {
         templateUrl: 'js/scripts/form/adminPage/adminView/admin.radio.html',
         scope: {
             "add": '=',
-            "question": '='
+            "question": '=',
+            "remove": '=',
+            "index": '='
 
         },
         replace: true

@@ -1,7 +1,7 @@
-if(!academy) {
+if (!academy) {
     var academy = {};
 }
-if(!academy.admin) {
+if (!academy.admin) {
     academy.admin = {};
 }
 academy.admin.SelectDirective = function () {
@@ -10,7 +10,9 @@ academy.admin.SelectDirective = function () {
         templateUrl: 'js/scripts/form/adminPage/adminView/admin.select.html',
         scope: {
             "add": '=',
-            "question": '='
+            "question": '=',
+            "remove": '=',
+            "index": '='
         },
         replace: true
     }

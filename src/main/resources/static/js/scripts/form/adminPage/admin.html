@@ -15,36 +15,28 @@
 
 
     <div flex layout="column" layout-align="top center" droppable drop="vm.handleDrop">
-        <div ng-hide="hide">
-            <md-input-container>
-                <label>Enter Formtitle</label>
-                <input ng-model="vm.form.formtitle"/>
-            </md-input-container>
-            <md-button class="md-raised md-primary" data-ng-click="hide=true">Done</md-button>
-        </div>
-        <h3 class="md-headline" ng-hide="!hide">{{vm.form.formtitle}}</h3>
-
+        <admin-formtitle formtitle="vm.form.formtitle"></admin-formtitle>
 
         <div ng-repeat="item in vm.itemBag track by $index">
 
             <div ng-if="item.type === 'text'">
-                <add-text question="item"></add-text>
+                <admin-text question="item" remove="vm.remove" index="$index"></admin-text>
             </div>
 
             <div ng-if="item.type === 'radio'">
-                <add-radio question="item" add="vm.addChoice"></add-radio>
+                <admin-radio question="item" add="vm.addChoice" remove="vm.remove" index="$index"></admin-radio>
             </div>
 
             <div ng-if="item.type==='select'">
-                <add-select question="item" add="vm.addChoice"></add-select>
+                <admin-select question="item" add="vm.addChoice" remove="vm.remove" index="$index"></admin-select>
             </div>
 
             <div ng-if="item.type==='checkbox'">
-                <add-checkbox question="item" add="vm.addChoice"></add-checkbox>
+                <admin-checkbox question="item" add="vm.addChoice" remove="vm.remove" index="$index"></admin-checkbox>
             </div>
 
             <div ng-if="item.type === 'textarea'">
-                <add-textarea question="item"></add-textarea>
+                <admin-textarea question="item" remove="vm.remove" index="$index"></admin-textarea>
             </div>
 
 

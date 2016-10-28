@@ -1,7 +1,7 @@
-if(!academy) {
+if (!academy) {
     var academy = {};
 }
-if(!academy.admin) {
+if (!academy.admin) {
     academy.admin = {};
 }
 academy.admin.CheckboxDirective = function () {
@@ -10,7 +10,9 @@ academy.admin.CheckboxDirective = function () {
         templateUrl: 'js/scripts/form/adminPage/adminView/admin.checkbox.html',
         scope: {
             "add": '=',
-            "question": '='
+            "question": '=',
+            "remove": '=',
+            "index": '='
 
         },
         replace: true
